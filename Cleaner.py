@@ -37,7 +37,7 @@ def write_log(Dups_file,log_info):
 
 def send_Email(pathh,reciver,log_info):
     msg = EmailMessage()
-    msg["From"] = "gaurav.arun.pekhale@gmail.com"
+    msg["From"] = "payalnimse0@gmail.com"
     msg["Subject"] = ' '.join(['Logg File of ',str(datetime.date.today())])
     msg["To"] = reciver
     msg.set_content(log_info)
@@ -46,7 +46,7 @@ def send_Email(pathh,reciver,log_info):
     s = smtplib.SMTP("smtp.gmail.com", 587)
     s.starttls(context=ssl.create_default_context())
     try:
-        s.login("gaurav.arun.pekhale@gmail.com","11June2001")
+        s.login("payalnimse0@gmail.com","11June2001")
         s.send_message(msg)
         print('Mail Sent Succesfully')
         engine_talk('Mail Sent Succesfully')
